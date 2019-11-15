@@ -7,6 +7,7 @@ import { sliderComponent } from './Components/Blocks/slider/slider.component';
 import { CategoriesComponent } from './Components/Blocks/Categories/Categories.component';
 
 import { RoutingModule } from './app-routing.module';
+import { RegisterComponent } from './Components/Pages/register/register.component';
 
 
 
@@ -15,7 +16,8 @@ import { RoutingModule } from './app-routing.module';
     AppComponent,
     navHeaderComponent,
     sliderComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule, RoutingModule
