@@ -6,6 +6,8 @@ var mUser = require('../model/user');
 
 router.post('/create', (req, res, next) => {
     var newUser = new mUser({
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
         userName: req.body.userName,
         password: req.body.password
     });
@@ -29,6 +31,8 @@ router.put('/update/:id', (req, res, next) => {
         if (err)
             res.status(500).json({ errmsg: err });
         else {
+            user.firstName = req.body.firstName;
+            user.lastName = req.body.lastName;
             user.userName = req.body.userName;
             user.password = req.body.password;
             user.save((err, user) => {
