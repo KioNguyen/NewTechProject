@@ -13,7 +13,6 @@ export class DashboardComponent implements OnInit {
   constructor(public OAuth: AuthService,    private router: Router) { }  
   ngOnInit() {  
     this.socialusers = JSON.parse(localStorage.getItem('socialusers'));  
-    console.log(this.socialusers.image);  
   }  
   logout() {  
    alert(1);  
